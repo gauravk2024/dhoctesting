@@ -3,7 +3,7 @@ name: Spring Boot CI/CD
 on:
   push:
     branches:
-      - develop
+      - main
 
 jobs:
   build-and-docker:
@@ -16,7 +16,7 @@ jobs:
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
-          distribution: 'temurin'
+          distribution: temurin
           java-version: '17'
 
       - name: Build Application
